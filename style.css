@@ -34,8 +34,8 @@ button:hover { background: #00d4ff; color: #05070a; box-shadow: 0 0 20px #00d4ff
 #noBtn { position: absolute; left: 50%; transform: translateX(-50%); border-color: #444; color: #666; }
 
 #spaceship-hero { position: fixed; top: 50%; left: 5%; z-index: 100; transition: all 1.5s ease-in-out; }
-.rocket-body { font-size: 80px; filter: drop-shadow(0 0 10px #00d4ff); }
-.engine-glow { width: 30px; height: 35px; background: #00d4ff; margin: -10px auto 0; filter: blur(10px); border-radius: 50%; animation: flicker 0.1s infinite; }
+.rocket-body { font-size: 60px; filter: drop-shadow(0 0 10px #00d4ff); } /* Kecilkan dari 80px ke 60px */
+.engine-glow { width: 25px; height: 30px; background: #00d4ff; margin: -10px auto 0; filter: blur(10px); border-radius: 50%; animation: flicker 0.1s infinite; }
 
 .flying { left: 120% !important; transform: rotate(15deg); }
 .reset-pos { left: -30% !important; transition: none !important; }
@@ -49,7 +49,6 @@ button:hover { background: #00d4ff; color: #05070a; box-shadow: 0 0 20px #00d4ff
     background: rgba(255, 255, 255, 0.03); border-radius: 15px; text-align: left; font-size: 0.9rem;
 }
 
-/* CAT DELIVERY ANIMATION */
 .cat-delivery { position: relative; display: inline-block; margin-bottom: 10px; }
 .bounce-flower { position: absolute; top: 0; right: -20px; font-size: 50px; animation: bounce 1s infinite; }
 

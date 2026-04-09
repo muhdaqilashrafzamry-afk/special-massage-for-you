@@ -46,11 +46,11 @@ function celebrate() {
     const ship = document.getElementById('spaceship-hero');
     const container = document.getElementById('container');
 
-    // 1. Zoom Spaceship
+    // 1. Zoom Spaceship (Saiz dikecilkan ke 1.2 dan dipindahkan ke atas sedikit)
     ship.style.transition = "all 2s ease-in-out";
-    ship.style.left = "20%";
-    ship.style.top = "50%";
-    ship.style.transform = "translate(-50%, -50%) scale(4)";
+    ship.style.left = "50%";
+    ship.style.top = "15%"; // Ubah dari 50% ke 15% supaya tidak tutup teks
+    ship.style.transform = "translate(-50%, -50%) scale(1.2)"; 
     ship.style.zIndex = "1000";
 
     // 2. Tunjuk Kucing & Bunga
