@@ -17,7 +17,7 @@ const song = document.getElementById('mySong');
 
 function nextPlanet(sceneNumber) {
     const ship = document.getElementById('spaceship-hero');
-    if(sceneNumber === 2) song.play().catch(e => console.log("Audio waiting for user."));
+    if(sceneNumber === 2) song.play().catch(e => console.log("Audio waiting for user gesture."));
 
     ship.classList.add('flying');
     setTimeout(() => {
@@ -36,33 +36,27 @@ function showScene(sceneNumber) {
     document.getElementById('scene' + sceneNumber).classList.add('active');
 }
 
-function moveButton() {
-    const btn = document.getElementById('noBtn');
-    btn.style.left = Math.random() * (window.innerWidth - 150) + "px";
-    btn.style.top = Math.random() * (window.innerHeight - 150) + "px";
-}
-
 function celebrate() {
     const ship = document.getElementById('spaceship-hero');
     const container = document.getElementById('container');
 
-    // 1. Zoom Spaceship (Saiz dikecilkan ke 1.2 dan dipindahkan ke atas sedikit)
+    // Animasi roket terbang ke tengah atas (saiz 1.2)
     ship.style.transition = "all 2s ease-in-out";
     ship.style.left = "50%";
-    ship.style.top = "15%"; // Ubah dari 50% ke 15% supaya tidak tutup teks
+    ship.style.top = "15%"; 
     ship.style.transform = "translate(-50%, -50%) scale(1.2)"; 
     ship.style.zIndex = "1000";
 
-    // 2. Tunjuk Kucing & Bunga
     setTimeout(() => {
         container.innerHTML = `
             <div class="active" style="animation: fadeIn 1s forwards;">
                 <div class="cat-delivery">
-                    <span style="font-size: 100px; display: block;">🐱</span>
+                    <span style="font-size: 80px; display: block;">🐱</span>
                     <span class="bounce-flower">💐</span>
                 </div>
                 <h1 style="color: #ff4d6d;">MISSION SUCCESS!</h1>
-                <p>A gift from your personal astronaut. <br>Thank you for giving me a chance, Fiqa! ❤️</p>
+                <p>A gift from your personal astronaut. <br>Thank you for giving me this chance, Fiqa! ❤️</p>
+                <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 15px;">I promise to take care of your heart.</p>
             </div>
         `;
         createHearts();
